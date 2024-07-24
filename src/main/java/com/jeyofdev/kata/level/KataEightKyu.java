@@ -31,4 +31,11 @@ public class KataEightKyu {
     public static String evenOrOdd(int number) {
         return number % 2 == 0 ? "Even" : "Odd";
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/4-opposite_number.md
+     */
+    public static int oppositeNumber(int number) {
+        return -number;
+    }
 }

@@ -38,4 +38,12 @@ public class KataEightKyuTest {
         assertEquals("Even", KataEightKyu.evenOrOdd(-2), "Should return \"Even\" for num = -2");
         assertEquals("Even", KataEightKyu.evenOrOdd(0), "Should return \"Even\" for num = 0");
     }
+
+    @Test
+    @DisplayName("oppositeNumber")
+    public void testOppositeNumber() {
+        assertEquals(-1, KataEightKyu.oppositeNumber(1), "Should return -1 for num = 1");
+        assertEquals(-2, KataEightKyu.oppositeNumber(2), "Should return -2 for num = 2");
+        assertEquals(1, KataEightKyu.oppositeNumber(-1), "Should return 1 for num = -1");
+    }
 }

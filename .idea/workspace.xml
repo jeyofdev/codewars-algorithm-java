@@ -27,7 +27,9 @@
   "associatedIndex": 0
 }]]></component>
   <component name="ProjectId" id="2jgcmikaVInrhVmtnpFsWInQAaQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
