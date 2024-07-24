@@ -46,4 +46,14 @@ public class KataEightKyuTest {
         assertEquals(-2, KataEightKyu.oppositeNumber(2), "Should return -2 for num = 2");
         assertEquals(1, KataEightKyu.oppositeNumber(-1), "Should return 1 for num = -1");
     }
+
+    @Test
+    @DisplayName("repeatStr")
+    public void testRepeatStr() {
+        assertEquals("aaaa", KataEightKyu.repeatStr(4, "a"), "Should return aaaa for string \"a\" and repeat 4");;
+        assertEquals("HelloHelloHello", KataEightKyu.repeatStr(3, "Hello"), "Should return HelloHelloHello for string = \"Hello\" and repeat 3");
+        assertEquals("", KataEightKyu.repeatStr(5, ""), "Should return \"\" for string = \"\" and repeat 5");
+        assertEquals("", KataEightKyu.repeatStr(0, "kata"), "Should return \"\" for string = \"kata\" and repeat 0");
+
+    }
 }

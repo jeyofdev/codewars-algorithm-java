@@ -38,4 +38,12 @@ public class KataEightKyu {
     public static int oppositeNumber(int number) {
         return -number;
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/5-string_repeat.md
+     */
+    public static String repeatStr(final int r, final String s) {
+        return s.repeat(r);
+    }
+
 }
