@@ -18,4 +18,14 @@ public class KataEightKyuTest {
         assertEquals(0.0, KataEightKyu.multiply(0.0, 5.0), "0.0 * 5.0 == 0.0");
         assertEquals(0.0, KataEightKyu.multiply(0.0, 0.0), "0.0 * 0.0 == 0.0");
     }
+
+    @Test
+    @DisplayName("AbbreviateTwoWords")
+    public void testAbbreviateTwoWords() {
+        assertEquals("S.H", KataEightKyu.AbbreviateTwoWords("Sam Harris"), "must return S.H");
+        assertEquals("P.F", KataEightKyu.AbbreviateTwoWords("Patrick Feenan"), "must return P.F");
+        assertEquals("E.C", KataEightKyu.AbbreviateTwoWords("Evan Cole"), "must return E.C");
+        assertEquals("P.F", KataEightKyu.AbbreviateTwoWords("P Favuzzi"), "must return P.F");
+        assertEquals("D.M", KataEightKyu.AbbreviateTwoWords("David Mendieta"), "must return D.M");
+    }
 }
