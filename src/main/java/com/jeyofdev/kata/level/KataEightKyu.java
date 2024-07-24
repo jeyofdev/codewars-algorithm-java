@@ -46,4 +46,11 @@ public class KataEightKyu {
         return s.repeat(r);
     }
 
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/6-jenny_s_secret_message.md
+     */
+    public static String secretMessage(String name) {
+        return name.equals("Johnny") ? "Hello, my love!" : "Hello, " + name + "!";
+    }
+
 }

@@ -54,6 +54,14 @@ public class KataEightKyuTest {
         assertEquals("HelloHelloHello", KataEightKyu.repeatStr(3, "Hello"), "Should return HelloHelloHello for string = \"Hello\" and repeat 3");
         assertEquals("", KataEightKyu.repeatStr(5, ""), "Should return \"\" for string = \"\" and repeat 5");
         assertEquals("", KataEightKyu.repeatStr(0, "kata"), "Should return \"\" for string = \"kata\" and repeat 0");
+    }
 
+    @Test
+    @DisplayName("secretMessage")
+    public void testSecretMessage() {
+        assertEquals("Hello, Jim!", KataEightKyu.secretMessage("Jim"), "should return Hello, Jim!");
+        assertEquals("Hello, Jane!", KataEightKyu.secretMessage("Jane"), "should return Hello, Jane!");
+        assertEquals("Hello, Simon!", KataEightKyu.secretMessage("Simon"), "should return Hello, Simon!");
+        assertEquals("Hello, my love!", KataEightKyu.secretMessage("Johnny"), "should return Hello, my love!");
     }
 }
