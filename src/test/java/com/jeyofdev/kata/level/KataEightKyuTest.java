@@ -22,10 +22,20 @@ public class KataEightKyuTest {
     @Test
     @DisplayName("AbbreviateTwoWords")
     public void testAbbreviateTwoWords() {
-        assertEquals("S.H", KataEightKyu.AbbreviateTwoWords("Sam Harris"), "must return S.H");
-        assertEquals("P.F", KataEightKyu.AbbreviateTwoWords("Patrick Feenan"), "must return P.F");
-        assertEquals("E.C", KataEightKyu.AbbreviateTwoWords("Evan Cole"), "must return E.C");
-        assertEquals("P.F", KataEightKyu.AbbreviateTwoWords("P Favuzzi"), "must return P.F");
-        assertEquals("D.M", KataEightKyu.AbbreviateTwoWords("David Mendieta"), "must return D.M");
+        assertEquals("S.H", KataEightKyu.AbbreviateTwoWords("Sam Harris"), "Should return S.H");
+        assertEquals("P.F", KataEightKyu.AbbreviateTwoWords("Patrick Feenan"), "Should return P.F");
+        assertEquals("E.C", KataEightKyu.AbbreviateTwoWords("Evan Cole"), "Should return E.C");
+        assertEquals("P.F", KataEightKyu.AbbreviateTwoWords("P Favuzzi"), "Should return P.F");
+        assertEquals("D.M", KataEightKyu.AbbreviateTwoWords("David Mendieta"), "Should return D.M");
+    }
+
+    @Test
+    @DisplayName("evenOrOdd")
+    public void testEvenOrOdd() {
+        assertEquals("Odd", KataEightKyu.evenOrOdd(1), "Should return \"Odd\" for num = 1");
+        assertEquals("Even", KataEightKyu.evenOrOdd(2), "Should return \"Even\" for num = 2");
+        assertEquals("Odd", KataEightKyu.evenOrOdd(-1), "Should return \"Odd\" for num = -1");
+        assertEquals("Even", KataEightKyu.evenOrOdd(-2), "Should return \"Even\" for num = -2");
+        assertEquals("Even", KataEightKyu.evenOrOdd(0), "Should return \"Even\" for num = 0");
     }
 }
