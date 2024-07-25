@@ -59,9 +59,16 @@ public class KataEightKyuTest {
     @Test
     @DisplayName("secretMessage")
     public void testSecretMessage() {
-        assertEquals("Hello, Jim!", KataEightKyu.secretMessage("Jim"), "should return Hello, Jim!");
-        assertEquals("Hello, Jane!", KataEightKyu.secretMessage("Jane"), "should return Hello, Jane!");
-        assertEquals("Hello, Simon!", KataEightKyu.secretMessage("Simon"), "should return Hello, Simon!");
-        assertEquals("Hello, my love!", KataEightKyu.secretMessage("Johnny"), "should return Hello, my love!");
+        assertEquals("Hello, Jim!", KataEightKyu.secretMessage("Jim"), "should return Hello, Jim! for string \"Jim\"");
+        assertEquals("Hello, Jane!", KataEightKyu.secretMessage("Jane"), "should return Hello, Jane! for string \"Jane\"");
+        assertEquals("Hello, Simon!", KataEightKyu.secretMessage("Simon"), "should return Hello, Simon! for string \"Simon\"");
+        assertEquals("Hello, my love!", KataEightKyu.secretMessage("Johnny"), "should return Hello, my love! for string \"Johnny\"");
+    }
+
+    @Test
+    @DisplayName("boolToWord")
+    public void testBoolToWord() {
+        assertEquals("Yes", KataEightKyu.boolToWord(true),"Should return \"Yes\" for true");
+        assertEquals("No", KataEightKyu.boolToWord(false),"Should return \"No\" for false");
     }
 }

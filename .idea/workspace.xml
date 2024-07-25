@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1d078b1-8f38-4160-989a-754b827314ea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jeyofdev/kata/level/KataEightKyu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jeyofdev/kata/level/KataEightKyu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/jeyofdev/kata/level/KataEightKyuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jeyofdev/kata/level/KataEightKyuTest.java" afterDir="false" />
     </list>
@@ -23,9 +24,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2jgcmikaVInrhVmtnpFsWInQAaQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -40,6 +41,7 @@
     "JUnit.AppTest.executor": "Run",
     "JUnit.KataEightKyuTest.executor": "Run",
     "JUnit.com.jeyofdev in codewars-algorithm-java.executor": "Run",
+    "JUnit.jeyofdev in codewars-algorithm-java.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -47,7 +49,7 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.com.jeyofdev in codewars-algorithm-java">
+  <component name="RunManager" selected="JUnit.jeyofdev in codewars-algorithm-java">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jeyofdev.Application" />
       <module name="codewars-algorithm-java" />
@@ -105,8 +107,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="jeyofdev in codewars-algorithm-java" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="codewars-algorithm-java" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/jeyofdev" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.jeyofdev in codewars-algorithm-java" />
         <item itemvalue="JUnit.com.jeyofdev in codewars-algorithm-java" />
         <item itemvalue="JUnit.KataEightKyuTest" />
         <item itemvalue="JUnit.AppTest" />

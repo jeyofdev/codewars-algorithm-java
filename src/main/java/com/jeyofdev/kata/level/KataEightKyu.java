@@ -53,4 +53,11 @@ public class KataEightKyu {
         return name.equals("Johnny") ? "Hello, my love!" : "Hello, " + name + "!";
     }
 
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/7-convert_boolean_values_to_strings_yes_or_no.md
+     */
+    public static String boolToWord(boolean b) {
+        return b ? "Yes" : "No";
+    }
+
 }
