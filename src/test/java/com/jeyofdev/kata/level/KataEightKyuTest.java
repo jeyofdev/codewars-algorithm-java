@@ -71,4 +71,13 @@ public class KataEightKyuTest {
         assertEquals("Yes", KataEightKyu.boolToWord(true),"Should return \"Yes\" for true");
         assertEquals("No", KataEightKyu.boolToWord(false),"Should return \"No\" for false");
     }
+
+    @Test
+    @DisplayName("removeFirstAndLastChars")
+    public void testRemoveFirstAndLastChars() {
+        assertEquals("loquen", KataEightKyu.removeFirstAndLastChars("eloquent"), "should return loquen for string \"eloquent\"");
+        assertEquals("ountr", KataEightKyu.removeFirstAndLastChars("country"), "should return ountr for string \"country\"");
+        assertEquals("erso", KataEightKyu.removeFirstAndLastChars("person"), "should return erso for string \"person\"");
+        assertEquals("lac", KataEightKyu.removeFirstAndLastChars("place"), "should return lac for string \"place\"");
+    }
 }

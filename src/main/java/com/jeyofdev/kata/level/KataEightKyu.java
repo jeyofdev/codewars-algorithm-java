@@ -60,4 +60,10 @@ public class KataEightKyu {
         return b ? "Yes" : "No";
     }
 
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/8-remove_first_and_last_character.md
+     */
+    public static String removeFirstAndLastChars(String str) {
+        return str.substring(1, str.length() - 1);
+    }
 }
