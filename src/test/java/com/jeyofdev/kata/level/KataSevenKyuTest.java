@@ -34,4 +34,14 @@ public class KataSevenKyuTest {
         assertNull(KataSevenKyu.toJadenCase(null), "should return null for argument null");
        assertNull(KataSevenKyu.toJadenCase(""), "should return null for string \"\"");
     }
+
+    @Test
+    @DisplayName("accum")
+    public void testAccum() {
+        assertEquals("Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu", KataSevenKyu.accum("ZpglnRxqenU"), "should return Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu for string \"ZpglnRxqenU\"");
+        assertEquals("N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb", KataSevenKyu.accum("NyffsGeyylB"), "should return N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb for string \"NyffsGeyylB\"");
+        assertEquals("M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu", KataSevenKyu.accum("MjtkuBovqrU"), "should return M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu for string \"MjtkuBovqrU\"");
+        assertEquals("E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm", KataSevenKyu.accum("EvidjUnokmM"), "should return E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm for string \"EvidjUnokmM\"");
+        assertEquals("H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc", KataSevenKyu.accum("HbideVbxncC"), "should return H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc for string \"HbideVbxncC\"");
+    }
 }

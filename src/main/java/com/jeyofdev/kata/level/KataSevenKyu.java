@@ -1,5 +1,6 @@
 package com.jeyofdev.kata.level;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -42,5 +43,21 @@ public class KataSevenKyu {
                 .collect(Collectors.toList());
 
         return String.join(" ", updatedWords);
+    }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/4-mumbling.md
+     */
+    public static String accum(String s) {
+        List<String> letterList = Arrays.asList(s.split(""));
+        List<String> resultList = new ArrayList<>();
+
+        int i = 0;
+        for (String letter : letterList) {
+            resultList.add(letter.toUpperCase() + letter.toLowerCase().repeat(i));
+            i++;
+        }
+
+        return String.join("-", resultList);
     }
 }
