@@ -4,6 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 @DisplayName("Katas level 7kyu")
 public class KataSevenKyuTest {
@@ -24,5 +25,13 @@ public class KataSevenKyuTest {
         assertEquals("dd", KataSevenKyu.getMiddleCharacter("middle"), "should return dd for string \"middle\"");
         assertEquals("t", KataSevenKyu.getMiddleCharacter("testing"), "should return t for string \"testing\"");
         assertEquals("A", KataSevenKyu.getMiddleCharacter("A"), "should return A for string \"A\"");
+    }
+
+    @Test
+    @DisplayName("toJadenCase")
+    public void testToJadenCase() {
+        assertEquals("Most Trees Are Blue", KataSevenKyu.toJadenCase("most trees are blue"), "should return Most Trees Are Blue for string \"most trees are blue\"");
+        assertNull(KataSevenKyu.toJadenCase(null), "should return null for argument null");
+       assertNull(KataSevenKyu.toJadenCase(""), "should return null for string \"\"");
     }
 }

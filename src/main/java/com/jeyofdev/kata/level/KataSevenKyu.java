@@ -2,6 +2,7 @@ package com.jeyofdev.kata.level;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class KataSevenKyu {
 
@@ -27,5 +28,19 @@ public class KataSevenKyu {
         int end = (int) middle + 1;
 
         return word.substring(begin, end);
+    }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/3-jaden_casing_strings.md
+     */
+    public static String toJadenCase(String phrase) {
+        if (phrase == null || phrase.isEmpty()) return null;
+
+        List<String> words = Arrays.asList(phrase.split(" "));
+        List<String> updatedWords = words.stream()
+                .map(w -> w.substring(0, 1).toUpperCase() + w.substring(1).toLowerCase())
+                .collect(Collectors.toList());
+
+        return String.join(" ", updatedWords);
     }
 }
