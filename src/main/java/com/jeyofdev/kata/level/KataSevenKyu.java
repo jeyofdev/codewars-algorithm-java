@@ -72,4 +72,19 @@ public class KataSevenKyu {
 
         return String.format("%.2f", sum);
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/6-folding_your_way_to_the_moon
+     */
+    public static Long fold(Double distance) {
+        Long result = 0L;
+
+        if (distance < 0) return null;
+
+        for (double i = 0.0001; i < distance; i*= 2) {
+            result += 1;
+        }
+
+        return result;
+    }
 }

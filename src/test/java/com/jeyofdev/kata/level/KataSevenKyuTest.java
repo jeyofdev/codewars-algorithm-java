@@ -51,6 +51,12 @@ public class KataSevenKyuTest {
         assertEquals("1,57", KataSevenKyu.seriesSum(5), "Should return 1,57 for int 5");
         assertEquals("1,77", KataSevenKyu.seriesSum(9), "Should return 1,77 for int 9");
         assertEquals("1,94", KataSevenKyu.seriesSum(15), "Should return 1,94 for int 15");
+    }
 
+    @Test
+    @DisplayName("fold")
+    public void testFold() {
+        assertEquals((Long)42L, KataSevenKyu.fold(384000000.0), "Should return 42L for double 384000000.0");
+        assertEquals((Long)0L, KataSevenKyu.fold(0.00005), "Should return 0L for double 0.00005");
     }
 }
