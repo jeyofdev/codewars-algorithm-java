@@ -74,4 +74,26 @@ public class KataEightKyu {
         return (int) Math.floor(time * 0.5);
     }
 
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/10-basic_mathematical_operations.md
+     */
+    public static Integer basicMath(String op, int v1, int v2)
+    {
+        switch (op) {
+            case "+":
+                return v1 + v2;
+
+            case "-":
+                return v1 - v2;
+
+            case "*":
+                return v1 * v2;
+
+            case "/":
+                return v1 / v2;
+
+            default:
+                return 0;
+        }
+    }
 }

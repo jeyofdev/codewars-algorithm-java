@@ -90,4 +90,13 @@ public class KataEightKyuTest {
         assertEquals(800, KataEightKyu.keepHydrated(1600.20),"Should return 800 for int 1600.20");
         assertEquals(40, KataEightKyu.keepHydrated(80),"Should return 40 for int 80");
     }
+
+    @Test
+    @DisplayName("basicMath")
+    public void testBasicMath() {
+        assertEquals(11, KataEightKyu.basicMath("+", 4, 7), "Should return 11 for operation 4 + 7");
+        assertEquals(-3, KataEightKyu.basicMath("-", 15, 18), "Should return -3 for operation 15 - 18");
+        assertEquals(25, KataEightKyu.basicMath("*", 5, 5), "Should return 25 for operation 5 * 5");
+        assertEquals(7, KataEightKyu.basicMath("/", 49, 7),"Should return 7 for operation 49 / 7");
+    }
 }
