@@ -44,4 +44,13 @@ public class KataSevenKyuTest {
         assertEquals("E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm", KataSevenKyu.accum("EvidjUnokmM"), "should return E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm for string \"EvidjUnokmM\"");
         assertEquals("H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc", KataSevenKyu.accum("HbideVbxncC"), "should return H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc for string \"HbideVbxncC\"");
     }
+
+    @Test
+    @DisplayName("seriesSum")
+    public void testSeriesSum() {
+        assertEquals("1,57", KataSevenKyu.seriesSum(5), "Should return 1,57 for int 5");
+        assertEquals("1,77", KataSevenKyu.seriesSum(9), "Should return 1,77 for int 9");
+        assertEquals("1,94", KataSevenKyu.seriesSum(15), "Should return 1,94 for int 15");
+
+    }
 }

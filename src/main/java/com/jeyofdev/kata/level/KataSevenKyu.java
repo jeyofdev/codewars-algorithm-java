@@ -60,4 +60,16 @@ public class KataSevenKyu {
 
         return String.join("-", resultList);
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/5-sum_of_the_first_nth_term_of_series.md
+     */
+    public static String seriesSum(int n) {
+        double sum = 0.00;
+        for (int i = 0; i < n; i++) {
+            sum += 1.00 / (1 + i * 3);
+        }
+
+        return String.format("%.2f", sum);
+    }
 }
