@@ -66,4 +66,12 @@ public class KataEightKyu {
     public static String removeFirstAndLastChars(String str) {
         return str.substring(1, str.length() - 1);
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/9-keep_hydrated.md
+     */
+    public static int keepHydrated(double time)  {
+        return (int) Math.floor(time * 0.5);
+    }
+
 }

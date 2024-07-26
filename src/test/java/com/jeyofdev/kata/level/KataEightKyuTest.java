@@ -32,19 +32,19 @@ public class KataEightKyuTest {
     @Test
     @DisplayName("evenOrOdd")
     public void testEvenOrOdd() {
-        assertEquals("Odd", KataEightKyu.evenOrOdd(1), "Should return \"Odd\" for num = 1");
-        assertEquals("Even", KataEightKyu.evenOrOdd(2), "Should return \"Even\" for num = 2");
-        assertEquals("Odd", KataEightKyu.evenOrOdd(-1), "Should return \"Odd\" for num = -1");
-        assertEquals("Even", KataEightKyu.evenOrOdd(-2), "Should return \"Even\" for num = -2");
-        assertEquals("Even", KataEightKyu.evenOrOdd(0), "Should return \"Even\" for num = 0");
+        assertEquals("Odd", KataEightKyu.evenOrOdd(1), "Should return \"Odd\" for int = 1");
+        assertEquals("Even", KataEightKyu.evenOrOdd(2), "Should return \"Even\" for int = 2");
+        assertEquals("Odd", KataEightKyu.evenOrOdd(-1), "Should return \"Odd\" for int = -1");
+        assertEquals("Even", KataEightKyu.evenOrOdd(-2), "Should return \"Even\" for int = -2");
+        assertEquals("Even", KataEightKyu.evenOrOdd(0), "Should return \"Even\" for int = 0");
     }
 
     @Test
     @DisplayName("oppositeNumber")
     public void testOppositeNumber() {
-        assertEquals(-1, KataEightKyu.oppositeNumber(1), "Should return -1 for num = 1");
-        assertEquals(-2, KataEightKyu.oppositeNumber(2), "Should return -2 for num = 2");
-        assertEquals(1, KataEightKyu.oppositeNumber(-1), "Should return 1 for num = -1");
+        assertEquals(-1, KataEightKyu.oppositeNumber(1), "Should return -1 for int = 1");
+        assertEquals(-2, KataEightKyu.oppositeNumber(2), "Should return -2 for int = 2");
+        assertEquals(1, KataEightKyu.oppositeNumber(-1), "Should return 1 for int = -1");
     }
 
     @Test
@@ -79,5 +79,15 @@ public class KataEightKyuTest {
         assertEquals("ountr", KataEightKyu.removeFirstAndLastChars("country"), "should return ountr for string \"country\"");
         assertEquals("erso", KataEightKyu.removeFirstAndLastChars("person"), "should return erso for string \"person\"");
         assertEquals("lac", KataEightKyu.removeFirstAndLastChars("place"), "should return lac for string \"place\"");
+    }
+
+    @Test
+    @DisplayName("keepHydrated")
+    public void testKeepHydrated() {
+        assertEquals(1, KataEightKyu.keepHydrated(2), "Should return 1 for int 2");
+        assertEquals(0, KataEightKyu.keepHydrated(0.97), "Should return 0 for int 0.97");
+        assertEquals(7, KataEightKyu.keepHydrated(14.64),"Should return 7 for int 14.64");
+        assertEquals(800, KataEightKyu.keepHydrated(1600.20),"Should return 800 for int 1600.20");
+        assertEquals(40, KataEightKyu.keepHydrated(80),"Should return 40 for int 80");
     }
 }
