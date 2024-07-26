@@ -87,4 +87,16 @@ public class KataSevenKyu {
 
         return result;
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/7-largest_5_digit_number_in_a_series
+     */
+    public static int getLargestFiveDigitNumber(final String digits) {
+        if (digits.length() <= 5) return Integer.parseInt(digits);
+
+        return Math.max(
+                Integer.parseInt(digits.substring(0, 5)),
+                getLargestFiveDigitNumber(digits.substring(1))
+        );
+    }
 }

@@ -59,4 +59,12 @@ public class KataSevenKyuTest {
         assertEquals((Long)42L, KataSevenKyu.fold(384000000.0), "Should return 42L for double 384000000.0");
         assertEquals((Long)0L, KataSevenKyu.fold(0.00005), "Should return 0L for double 0.00005");
     }
+
+    @Test
+    @DisplayName("getLargestFiveDigitNumber")
+    public void testGetLargestFiveDigitNumber() {
+        assertEquals(83910, KataSevenKyu.getLargestFiveDigitNumber("283910"), "Should return 83910 for string \"283910\"");
+        assertEquals(67890, KataSevenKyu.getLargestFiveDigitNumber("1234567890"), "Should return 67890 for string \"1234567890\"");
+        assertEquals(74765, KataSevenKyu.getLargestFiveDigitNumber("731674765"), "Should return 74765 for string \"731674765\"");
+    }
 }
