@@ -1,8 +1,6 @@
 package com.jeyofdev.kata.level;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class KataSixKyu {
@@ -34,5 +32,24 @@ public class KataSixKyu {
         }
 
         return sum % n == 0 ? sum / n : -1;
+    }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/6kyu/3-find_the_odd_int.md
+     */
+    public static int findOddInt(int[] a) {
+        Map<Integer, Integer> countNumbs = new HashMap<>();
+
+        for (int number : a) {
+            countNumbs.put(number, countNumbs.getOrDefault(number, 0) + 1);
+        }
+
+        for (Map.Entry<Integer, Integer> entry : countNumbs.entrySet()) {
+            if (entry.getValue() % 2 != 0) {
+                return entry.getKey();
+            }
+        }
+
+        return -1;
     }
 }

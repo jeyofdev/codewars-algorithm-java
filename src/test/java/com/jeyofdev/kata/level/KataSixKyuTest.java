@@ -24,4 +24,15 @@ public class KataSixKyuTest {
         assertEquals(-1, KataSixKyu.digPow(92, 1), "should return -1 for integers 92 and 1");
         assertEquals(51, KataSixKyu.digPow(46288, 3), "should return 51 for integers 46288 and 3");
     }
+
+    @Test
+    @DisplayName("findOddInt")
+    public void testFindOddInt() {
+        assertEquals(5, KataSixKyu.findOddInt(new int[]{20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5}), "should return 5 for array [20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]");
+        assertEquals(-1, KataSixKyu.findOddInt(new int[]{1,1,2,-2,5,2,4,4,-1,-2,5}), "should return 5 for array [1,1,2,-2,5,2,4,4,-1,-2,5]");
+        assertEquals(5, KataSixKyu.findOddInt(new int[]{20,1,1,2,2,3,3,5,5,4,20,4,5}), "should return 5 for array [20,1,1,2,2,3,3,5,5,4,20,4,5]");
+        assertEquals(10, KataSixKyu.findOddInt(new int[]{10}), "should return 5 for array [10]");
+        assertEquals(10, KataSixKyu.findOddInt(new int[]{1,1,1,1,1,1,10,1,1,1,1}), "should return 5 for array [1,1,1,1,1,1,10,1,1,1,1]");
+        assertEquals(1, KataSixKyu.findOddInt(new int[]{5,4,3,2,1,5,4,3,2,10,10}), "should return 5 for array [5,4,3,2,1,5,4,3,2,10,10]");
+    }
 }
