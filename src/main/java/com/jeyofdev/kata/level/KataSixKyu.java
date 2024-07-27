@@ -52,4 +52,24 @@ public class KataSixKyu {
 
         return -1;
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/6kyu/4-duplicate_encoder.md
+     */
+    public static String encode(String word){
+        StringBuilder result = new StringBuilder();
+
+        char[] charArr = word.toLowerCase().toCharArray();
+        Map<Character, Integer> charCount = new HashMap<>();
+
+        for (char c : charArr) {
+            charCount.put(c, charCount.getOrDefault(c, 0) + 1);
+        }
+
+        for (char c : charArr) {
+            result.append(charCount.get(c) > 1 ? ")" : "(");
+        }
+
+        return result.toString();
+    }
 }

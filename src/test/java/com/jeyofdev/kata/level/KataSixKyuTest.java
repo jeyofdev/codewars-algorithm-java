@@ -35,4 +35,10 @@ public class KataSixKyuTest {
         assertEquals(10, KataSixKyu.findOddInt(new int[]{1,1,1,1,1,1,10,1,1,1,1}), "should return 5 for array [1,1,1,1,1,1,10,1,1,1,1]");
         assertEquals(1, KataSixKyu.findOddInt(new int[]{5,4,3,2,1,5,4,3,2,10,10}), "should return 5 for array [5,4,3,2,1,5,4,3,2,10,10]");
     }
+
+    @Test
+    @DisplayName("encode")
+    public void testEncode() {
+        assertEquals(")()())()(()()(", KataSixKyu.encode("Prespecialized"), "should return )()())()(()()( for string \"Prespecialized\"");
+        assertEquals("))))())))", KataSixKyu.encode("   ()(   "), "should return ))))()))) for string \"   ()(   \"");}
 }
