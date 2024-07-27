@@ -20,4 +20,19 @@ public class KataSixKyu {
                 .filter((str -> words.contains(str)))
                 .sorted().toArray(String[]::new);
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/6kyu/2-playing_with_digits.md
+     */
+    public static long digPow(int n, int p) {
+        int sum = 0;
+        String str = String.valueOf(n);
+
+        for (int i  = 0; i < str.length(); i++) {
+            int digit = Character.getNumericValue(str.charAt(i));
+            sum += (int) Math.pow(digit, p + i);
+        }
+
+        return sum % n == 0 ? sum / n : -1;
+    }
 }
