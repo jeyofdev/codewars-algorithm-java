@@ -40,5 +40,13 @@ public class KataSixKyuTest {
     @DisplayName("encode")
     public void testEncode() {
         assertEquals(")()())()(()()(", KataSixKyu.encode("Prespecialized"), "should return )()())()(()()( for string \"Prespecialized\"");
-        assertEquals("))))())))", KataSixKyu.encode("   ()(   "), "should return ))))()))) for string \"   ()(   \"");}
+        assertEquals("))))())))", KataSixKyu.encode("   ()(   "), "should return ))))()))) for string \"   ()(   \"");
+    }
+
+    @Test
+    @DisplayName("toCamelCase")
+    public void testToCamelCase() {
+        assertEquals("theStealthWarrior", KataSixKyu.toCamelCase("the_Stealth_Warrior"), "should return theStealthWarrior for string \"the_Stealth_Warrior\"");
+        assertEquals("theStealthWarrior", KataSixKyu.toCamelCase("the-Stealth-Warrior"), "should return theStealthWarrior for string \"the-Stealth-Warrior\"");
+    }
 }

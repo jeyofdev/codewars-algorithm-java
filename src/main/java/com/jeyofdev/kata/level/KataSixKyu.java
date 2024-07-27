@@ -72,4 +72,18 @@ public class KataSixKyu {
 
         return result.toString();
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/6kyu/5-convert_string_to_camel_case.md
+     */
+    public static String toCamelCase(String s){
+        String result = "";
+        String[] words = s.replaceAll("[-_]", " ").split(" ");
+
+        for (int i = 0; i < words.length; i++) {
+            result += i == 0 ? words[i] : words[i].substring(0, 1).toUpperCase() + words[i].substring(1);
+        }
+
+        return String.join("", result);
+    }
 }
