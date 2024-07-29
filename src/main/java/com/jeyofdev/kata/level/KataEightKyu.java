@@ -96,4 +96,17 @@ public class KataEightKyu {
                 return 0;
         }
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/11-fuel_calculator_total_cost.md
+     */
+    public static double fuelPrice(int litres, double pricePerLitre) {
+        for (int i = 2; i <= 10; i += 2) {
+            if (litres >= i) {
+                pricePerLitre -= 0.05;
+            }
+        }
+
+        return (double) Math.round(litres * pricePerLitre * 100) / 100;
+    }
 }

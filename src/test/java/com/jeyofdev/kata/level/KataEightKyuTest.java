@@ -99,4 +99,12 @@ public class KataEightKyuTest {
         assertEquals(25, KataEightKyu.basicMath("*", 5, 5), "Should return 25 for operation 5 * 5");
         assertEquals(7, KataEightKyu.basicMath("/", 49, 7),"Should return 7 for operation 49 / 7");
     }
+
+    @Test
+    @DisplayName("fuelPrice")
+    public void testFuelPrice() {
+        assertEquals(5.65d, KataEightKyu.fuelPrice(5, 1.23d), "Should return 5.65d for 5 litres and 1.23d price per litre");
+        assertEquals(18.40d, KataEightKyu.fuelPrice(8, 2.5d), "Should return 18.40d for 8 litres and 2.5d price per litre");
+        assertEquals(27.50d, KataEightKyu.fuelPrice(5, 5.6d),  "Should return 27.50d for 5 litres and 5.6d price per litre");
+    }
 }
