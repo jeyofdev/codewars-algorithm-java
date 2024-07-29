@@ -6,6 +6,7 @@ The output should be two capital letters with a dot separating them.
 
 It should look like this:
 
+```
 Sam Harris => S.H
-
 patrick feeney => P.F
+```

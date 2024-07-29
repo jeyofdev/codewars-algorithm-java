@@ -1,6 +1,8 @@
 # Playing with digits
 
-Some numbers have funny properties. For example:
+Some numbers have funny properties. 
+
+### For example:
 
 ```
 89 --> 8¹ + 9² = 89 * 1
@@ -16,7 +18,8 @@ In other words, writing the consecutive digits of n as a, b, c, d ..., is there 
 If it is the case we will return k, if not return -1.
 
 Note: n and p will always be strictly positive integers.
-Examples:
+
+### Examples:
 
 ```
 n = 89; p = 1 ---> 1 since 8¹ + 9² = 89 = 89 * 1
