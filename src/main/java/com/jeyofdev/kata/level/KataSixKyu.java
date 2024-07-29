@@ -116,4 +116,27 @@ public class KataSixKyu {
 
         return Arrays.equals(squareValues, b);
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/6kyu/8-consecutive_strings.md
+     */
+    public static String longestConsec(String[] arr, int k) {
+        int arrLength = arr.length;
+
+        if ((k > arrLength) || (k <= 0)) {
+            return "";
+        }
+
+        String output = "";
+        String currentStr = "";
+
+        for (int i = 0; i <= arrLength - k; i++) {
+            currentStr = String.join("", Arrays.copyOfRange(arr, i , i + k));
+            if (currentStr.length() > output.length()) {
+                output = currentStr;
+            }
+        }
+
+        return output;
+    }
 }

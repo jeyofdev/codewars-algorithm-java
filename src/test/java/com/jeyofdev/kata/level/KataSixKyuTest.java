@@ -79,4 +79,18 @@ public class KataSixKyuTest {
         int[] b = new int[]{121, 14641, 20736, 361, 25921, 361, 20736, 361};
         assertTrue(KataSixKyu.areTheSame(a, b));
     }
+
+    @Test
+    @DisplayName("longestConsec")
+    public void testLongestConsec() {
+        assertEquals("abigailtheta", KataSixKyu.longestConsec(new String[] {"zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"}, 2));
+        assertEquals("oocccffuucccjjjkkkjyyyeehh", KataSixKyu.longestConsec(new String[] {"ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"}, 1));
+        assertEquals("", KataSixKyu.longestConsec(new String[] {}, 3));
+        assertEquals("wkppqsztdkmvcuwvereiupccauycnjutlvvweqilsfytihvrzlaodfixoyxvyuyvgpck", KataSixKyu.longestConsec(new String[] {"itvayloxrp","wkppqsztdkmvcuwvereiupccauycnjutlv","vweqilsfytihvrzlaodfixoyxvyuyvgpck"}, 2));
+        assertEquals("wlwsasphmxxowiaxujylentrklctozmymu", KataSixKyu.longestConsec(new String[] {"wlwsasphmxx","owiaxujylentrklctozmymu","wpgozvxxiu"}, 2));
+        assertEquals("", KataSixKyu.longestConsec(new String[] {"zone", "abigail", "theta", "form", "libe", "zas"}, -2));
+        assertEquals("ixoyx3452zzzzzzzzzzzz", KataSixKyu.longestConsec(new String[] {"it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"}, 3));
+        assertEquals("", KataSixKyu.longestConsec(new String[] {"it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"}, 15));
+        assertEquals("", KataSixKyu.longestConsec(new String[] {"it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"}, 0));
+    }
 }
