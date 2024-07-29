@@ -86,4 +86,18 @@ public class KataSixKyu {
 
         return String.join("", result);
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/6kyu/6-count_the_smiley_faces.md
+     */
+    public static int countSmileys(List<String> arr) {
+        int result = 0;
+        List<String> valid = Arrays.asList(":)",";)",":-)",";-)",";~)",":~)",":D",";D",":-D",":~D",";-D",";~D");
+
+        for (String smiley : arr) {
+            result += valid.contains(smiley) ? 1 : 0;
+        }
+
+        return result;
+    }
 }

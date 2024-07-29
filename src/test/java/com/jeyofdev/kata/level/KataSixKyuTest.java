@@ -3,6 +3,9 @@ package com.jeyofdev.kata.level;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -48,5 +51,25 @@ public class KataSixKyuTest {
     public void testToCamelCase() {
         assertEquals("theStealthWarrior", KataSixKyu.toCamelCase("the_Stealth_Warrior"), "should return theStealthWarrior for string \"the_Stealth_Warrior\"");
         assertEquals("theStealthWarrior", KataSixKyu.toCamelCase("the-Stealth-Warrior"), "should return theStealthWarrior for string \"the-Stealth-Warrior\"");
+    }
+
+    @Test
+    @DisplayName("countSmileys")
+    public void testCountSmileys() {
+        List<String> a = new ArrayList<>();
+        a.add(":)"); a.add(":D"); a.add(":-}"); a.add(":-()");
+        assertEquals(2, KataSixKyu.countSmileys(a));
+
+        List<String> b = new ArrayList<String>();
+        b.add(":)"); b.add("XD"); b.add(":0}"); b.add("x:-"); b.add("):-"); b.add("D:");
+        assertEquals(1, KataSixKyu.countSmileys(b));
+
+        List<String> c =  new ArrayList<String>();
+        c.add(":)"); c.add(":D"); c.add("X-}"); c.add("xo)"); c.add(":X"); c.add(":-3"); c.add(":3");
+        assertEquals(2, KataSixKyu.countSmileys(c));
+
+        List<String> d =  new ArrayList<String>();
+        d.add(":)"); d.add(":)"); d.add("x-]"); d.add(":ox"); d.add(";-("); d.add(";-)"); d.add(";~("); d.add(":~D");
+        assertEquals(4, KataSixKyu.countSmileys(d));
     }
 }
