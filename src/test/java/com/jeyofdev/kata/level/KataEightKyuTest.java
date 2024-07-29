@@ -2,6 +2,8 @@ package com.jeyofdev.kata.level;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Katas level 8kyu")
@@ -106,5 +108,17 @@ public class KataEightKyuTest {
         assertEquals(5.65d, KataEightKyu.fuelPrice(5, 1.23d), "Should return 5.65d for 5 litres and 1.23d price per litre");
         assertEquals(18.40d, KataEightKyu.fuelPrice(8, 2.5d), "Should return 18.40d for 8 litres and 2.5d price per litre");
         assertEquals(27.50d, KataEightKyu.fuelPrice(5, 5.6d),  "Should return 27.50d for 5 litres and 5.6d price per litre");
+    }
+
+    @Test
+    @DisplayName("countPositivesSumNegatives")
+    public void testCountPositivesSumNegatives() {
+        int[] expectedResultA = new int[] {10, -65};
+
+        assertArrayEquals(expectedResultA, KataEightKyu.countPositivesSumNegatives(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15}));
+
+        int[] expectedResultB = new int[] {8, -50};
+        assertArrayEquals(expectedResultB, KataEightKyu.countPositivesSumNegatives(new int[] {0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14}));
+
     }
 }

@@ -51,6 +51,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/doc/8kyu" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.jeyofdev.kata.level" />
     </key>

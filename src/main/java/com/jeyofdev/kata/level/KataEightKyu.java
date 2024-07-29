@@ -1,5 +1,7 @@
 package com.jeyofdev.kata.level;
 
+import java.util.Arrays;
+
 public class KataEightKyu {
 
     /**
@@ -108,5 +110,20 @@ public class KataEightKyu {
         }
 
         return (double) Math.round(litres * pricePerLitre * 100) / 100;
+    }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/12-count_of_positives_sum_of_negatives.md
+     */
+    public static int[] countPositivesSumNegatives(int[] input)
+    {
+        if (input == null || input.length == 0) {
+            return new int[0];
+        }
+
+        int count = (int) Arrays.stream(input).filter(n -> n > 0).count();
+        int sum = Arrays.stream(input).filter(n -> n < 0).sum();
+
+        return new int[] {count, sum};
     }
 }
