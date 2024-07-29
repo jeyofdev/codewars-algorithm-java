@@ -100,4 +100,20 @@ public class KataSixKyu {
 
         return result;
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/6kyu/7-are_they_the_same.md
+     */
+    public static boolean areTheSame(int[] a, int[] b) {
+        if (a == null || b == null) {
+            return false;
+        }
+
+        int[] squareValues = Arrays.stream(a).map(e -> e * e).toArray();
+
+        Arrays.sort(squareValues);
+        Arrays.sort(b);
+
+        return Arrays.equals(squareValues, b);
+    }
 }

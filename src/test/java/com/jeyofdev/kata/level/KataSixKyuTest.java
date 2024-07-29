@@ -6,8 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Katas level 6kyu")
 public class KataSixKyuTest {
@@ -71,5 +70,13 @@ public class KataSixKyuTest {
         List<String> d =  new ArrayList<String>();
         d.add(":)"); d.add(":)"); d.add("x-]"); d.add(":ox"); d.add(";-("); d.add(";-)"); d.add(";~("); d.add(":~D");
         assertEquals(4, KataSixKyu.countSmileys(d));
+    }
+
+    @Test
+    @DisplayName("areTheSame")
+    public void testAreTheSame() {
+        int[] a = new int[]{121, 144, 19, 161, 19, 144, 19, 11};
+        int[] b = new int[]{121, 14641, 20736, 361, 25921, 361, 20736, 361};
+        assertTrue(KataSixKyu.areTheSame(a, b));
     }
 }
