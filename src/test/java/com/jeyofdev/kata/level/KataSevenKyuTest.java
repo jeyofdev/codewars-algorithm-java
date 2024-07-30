@@ -3,8 +3,8 @@ package com.jeyofdev.kata.level;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 @DisplayName("Katas level 7kyu")
 public class KataSevenKyuTest {
@@ -66,5 +66,20 @@ public class KataSevenKyuTest {
         assertEquals(83910, KataSevenKyu.getLargestFiveDigitNumber("283910"), "Should return 83910 for string \"283910\"");
         assertEquals(67890, KataSevenKyu.getLargestFiveDigitNumber("1234567890"), "Should return 67890 for string \"1234567890\"");
         assertEquals(74765, KataSevenKyu.getLargestFiveDigitNumber("731674765"), "Should return 74765 for string \"731674765\"");
+    }
+
+    @Test
+    @DisplayName("isAscOrder")
+    public void testIsAscOrder() {
+        assertTrue(KataSevenKyu.isAscOrder(new int[] {1, 2}));
+        assertFalse(KataSevenKyu.isAscOrder(new int[] {2, 1}));
+
+        assertTrue(KataSevenKyu.isAscOrder(new int[] {1, 2, 3}));
+        assertFalse(KataSevenKyu.isAscOrder(new int[] {1, 3, 2}));
+        assertTrue(KataSevenKyu.isAscOrder(new int[] {1, 4, 13, 97, 508, 1047, 20058}));
+        assertFalse(KataSevenKyu.isAscOrder(new int[] {56, 98, 123, 67, 742, 1024, 32, 90969}));
+
+        assertTrue(KataSevenKyu.isAscOrder(new int[] {1, 4, 13, 97, 508, 1047, 20058}));
+        assertFalse(KataSevenKyu.isAscOrder(new int[] {56, 98, 123, 67, 742, 1024, 32, 90969}));
     }
 }

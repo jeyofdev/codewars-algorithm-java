@@ -74,7 +74,7 @@ public class KataSevenKyu {
     }
 
     /**
-     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/6-folding_your_way_to_the_moon
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/6-folding_your_way_to_the_moon.md
      */
     public static Long fold(Double distance) {
         Long result = 0L;
@@ -89,7 +89,7 @@ public class KataSevenKyu {
     }
 
     /**
-     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/7-largest_5_digit_number_in_a_series
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/7-largest_5_digit_number_in_a_series.md
      */
     public static int getLargestFiveDigitNumber(final String digits) {
         if (digits.length() <= 5) return Integer.parseInt(digits);
@@ -98,5 +98,23 @@ public class KataSevenKyu {
                 Integer.parseInt(digits.substring(0, 5)),
                 getLargestFiveDigitNumber(digits.substring(1))
         );
+    }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/8-are_the_numbers_in_order.md
+     */
+    public static boolean isAscOrder(int[] arr) {
+        String arrJoin = Arrays.stream(arr)
+                .mapToObj((n) -> String.valueOf(n))
+                .collect(Collectors.joining(""));
+
+        int[] sortArr = Arrays.copyOf(arr, arr.length);
+        Arrays.sort(sortArr);
+
+        String sorted = Arrays.stream(sortArr)
+                .mapToObj((n) -> String.valueOf(n))
+                .collect(Collectors.joining(""));
+
+        return arrJoin.equals(sorted);
     }
 }
