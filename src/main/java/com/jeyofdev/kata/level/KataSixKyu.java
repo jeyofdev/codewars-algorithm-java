@@ -160,4 +160,26 @@ public class KataSixKyu {
 
         return count;
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/6kyu/10-rectangle_into_squares.md
+     */
+    public static List<Integer> squareInRectangle(int lng, int wdth) {
+        if (lng == wdth) return null;
+
+        List<Integer> output = new ArrayList<>();
+
+        while(lng > 0 && wdth > 0) {
+            if (lng > wdth) {
+                output.add(wdth);
+                lng -= wdth;
+            }
+            else {
+                output.add(lng);
+                wdth -= lng;
+            }
+        }
+
+        return output;
+    }
 }

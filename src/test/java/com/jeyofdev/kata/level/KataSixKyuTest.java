@@ -4,6 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -101,5 +102,12 @@ public class KataSixKyuTest {
         assertEquals(0, KataSixKyu.persistence(4), "should return 0 for integer 4");
         assertEquals(2, KataSixKyu.persistence(25), "should return 2 for integer 25");
         assertEquals(4, KataSixKyu.persistence(999), "should return 4 for integer 999");
+    }
+
+    @Test
+    @DisplayName("squareInRectangle")
+    public void testSquareInRectangle() {
+        assertEquals(new ArrayList<Integer>(Arrays.asList(3, 2, 1, 1)), KataSixKyu.squareInRectangle(5, 3));
+        assertNull(KataSixKyu.squareInRectangle(5, 5));
     }
 }
