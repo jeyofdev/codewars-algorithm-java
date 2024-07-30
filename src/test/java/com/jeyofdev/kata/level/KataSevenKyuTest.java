@@ -82,4 +82,11 @@ public class KataSevenKyuTest {
         assertTrue(KataSevenKyu.isAscOrder(new int[] {1, 4, 13, 97, 508, 1047, 20058}));
         assertFalse(KataSevenKyu.isAscOrder(new int[] {56, 98, 123, 67, 742, 1024, 32, 90969}));
     }
+
+    @Test
+    @DisplayName("breakChocolate")
+    public void testBreakChocolate() {
+        assertEquals(24, KataSevenKyu.breakChocolate(5, 5), "Should return 24 for integers 5 and 5");
+        assertEquals(0, KataSevenKyu.breakChocolate(1, 1), "Should return 0 for integers 1 and 1");
+    }
 }

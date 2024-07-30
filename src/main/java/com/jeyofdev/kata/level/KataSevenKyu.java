@@ -117,4 +117,12 @@ public class KataSevenKyu {
 
         return arrJoin.equals(sorted);
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/9-breaking_chocolate_problem.md
+     */
+    public static long breakChocolate(long n, long m) {
+        return (n > 0) && (m > 0) ? (n * m) - 1 : 0;
+    }
+
 }
