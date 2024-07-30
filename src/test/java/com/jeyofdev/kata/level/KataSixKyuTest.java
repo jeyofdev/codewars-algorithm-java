@@ -93,4 +93,13 @@ public class KataSixKyuTest {
         assertEquals("", KataSixKyu.longestConsec(new String[] {"it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"}, 15));
         assertEquals("", KataSixKyu.longestConsec(new String[] {"it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"}, 0));
     }
+
+    @Test
+    @DisplayName("persistence")
+    public void testPersistence() {
+        assertEquals(3, KataSixKyu.persistence(39), "should return 3 for integer 39");
+        assertEquals(0, KataSixKyu.persistence(4), "should return 0 for integer 4");
+        assertEquals(2, KataSixKyu.persistence(25), "should return 2 for integer 25");
+        assertEquals(4, KataSixKyu.persistence(999), "should return 4 for integer 999");
+    }
 }

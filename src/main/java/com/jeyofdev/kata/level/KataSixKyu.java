@@ -139,4 +139,25 @@ public class KataSixKyu {
 
         return output;
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/6kyu/9-persistent_bugger.md
+     */
+    public static int persistence(long n) {
+        int count = 0;
+
+        while (n > 9) {
+            long product = 1;
+
+            while(n != 0) {
+                product *= n % 10;
+                n /= 10;
+            }
+
+            n = product;
+            count++;
+        }
+
+        return count;
+    }
 }
