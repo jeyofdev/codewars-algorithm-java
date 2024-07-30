@@ -182,4 +182,19 @@ public class KataSixKyu {
 
         return output;
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/6kyu/11-build_a_pile_of_cubes.md
+     */
+    public static long findNb(long m) {
+        long total = 0;
+        long n = 0;
+
+        while (total < m) {
+            n += 1;
+            total += n * n * n;
+        }
+
+        return total == m ? n : -1;
+    }
 }

@@ -110,4 +110,13 @@ public class KataSixKyuTest {
         assertEquals(new ArrayList<Integer>(Arrays.asList(3, 2, 1, 1)), KataSixKyu.squareInRectangle(5, 3));
         assertNull(KataSixKyu.squareInRectangle(5, 5));
     }
+
+    @Test
+    @DisplayName("findNb")
+    public void testFindNb() {
+        assertEquals(2022, KataSixKyu.findNb(4183059834009L), "should return 2022 for long 4183059834009L");
+        assertEquals(-1, KataSixKyu.findNb(24723578342962L), "should return -1 for long 24723578342962L");
+        assertEquals(4824, KataSixKyu.findNb(135440716410000L), "should return 4824 for long 135440716410000L");
+        assertEquals(3568, KataSixKyu.findNb(40539911473216L), "should return 3568 for long 40539911473216L");
+    }
 }
