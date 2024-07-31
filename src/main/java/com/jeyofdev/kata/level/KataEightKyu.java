@@ -138,4 +138,12 @@ public class KataEightKyu {
         return 0;
     }
 
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/14-invert_values.md
+     */
+    public static int[] invertValues(int[] array) {
+        return Arrays.stream(array)
+                .map(e -> -e)
+                .toArray();
+    }
 }

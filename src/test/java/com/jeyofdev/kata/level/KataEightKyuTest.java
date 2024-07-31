@@ -3,6 +3,8 @@ package com.jeyofdev.kata.level;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -130,6 +132,19 @@ public class KataEightKyuTest {
         assertEquals(6.6, KataEightKyu.sumArrays(new double[] {1.1, 2.2, 3.3}));
         assertEquals(9.2, KataEightKyu.sumArrays(new double[] {1, 5.2, 4, 0, -1}));
         assertEquals(320, KataEightKyu.sumArrays(new double[] {30, 89, 100, 101}));
+    }
 
+    private void runTest(int[] expected, int[] input) {
+        assertArrayEquals(expected, KataEightKyu.invertValues(input), () -> String.format("Input: %s", Arrays.toString(input)));
+    }
+
+    @Test
+    @DisplayName("invertValues")
+    public void testInvertValues() {
+        runTest(new int[]{-1, -2, -3, -4, -5}, new int[]{1, 2, 3, 4, 5});
+        runTest(new int[]{-1, 2, -3, 4, -5}, new int[]{1, -2, 3, -4, 5});
+        runTest(new int[]{1, 2, 3, 4, 5}, new int[]{-1, -2, -3, -4, -5});
+        runTest(new int[]{}, new int[]{});
+        runTest(new int[]{0}, new int[]{0});
     }
 }
