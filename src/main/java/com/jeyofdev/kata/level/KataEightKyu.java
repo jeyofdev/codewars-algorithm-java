@@ -146,4 +146,11 @@ public class KataEightKyu {
                 .map(e -> -e)
                 .toArray();
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/15-array_plus_array.md
+     */
+    public static int arrayPlusArray(int[] arr1, int[] arr2) {
+        return Arrays.stream(arr1).reduce(0, (p, c) -> p + c) + Arrays.stream(arr2).reduce(0, (p, c) -> p + c);
+    }
 }
