@@ -166,4 +166,14 @@ public class KataEightKyu {
 
         return new String(numbers);
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/17-get_the_mean_of_an_array.md
+     */
+    public static int getAverage(int[] marks){
+        int sum = Arrays.stream(marks).reduce(0, (p, c) -> p + c);
+        double avg = (double) sum / marks.length;
+
+        return (int) Math.floor(avg);
+    }
 }

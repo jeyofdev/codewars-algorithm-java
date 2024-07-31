@@ -170,4 +170,12 @@ public class KataEightKyuTest {
         assertEquals("####################################man!", KataEightKyu.creditCardMask("Nananananananananananananananana Batman!"), "Should return ####################################man! for string \"Nananananananananananananananana Batman!\"");
         assertEquals(2100, KataEightKyu.arrayPlusArray(new int[]{100,200,300}, new int[]{400,500,600}));
     }
+
+    @Test
+    @DisplayName("getAverage")
+    public void testGetAverage() {
+        assertEquals(2, KataEightKyu.getAverage(new int[] {2,2,2,2}));
+        assertEquals(3, KataEightKyu.getAverage(new int[] {1,2,3,4,5}));
+        assertEquals(1, KataEightKyu.getAverage(new int[] {1,1,1,1,1,1,1,2}));
+    }
 }
