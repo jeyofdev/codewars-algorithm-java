@@ -176,4 +176,12 @@ public class KataEightKyu {
 
         return (int) Math.floor(avg);
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/18-small_enough_beginner.md
+     */
+    public static boolean smallEnough(int[] a, int limit)
+    {
+        return Arrays.stream(a).allMatch(v -> v <= limit);
+    }
 }

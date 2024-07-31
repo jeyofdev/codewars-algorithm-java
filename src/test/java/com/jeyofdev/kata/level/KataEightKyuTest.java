@@ -5,8 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Katas level 8kyu")
 public class KataEightKyuTest {
@@ -177,5 +176,14 @@ public class KataEightKyuTest {
         assertEquals(2, KataEightKyu.getAverage(new int[] {2,2,2,2}));
         assertEquals(3, KataEightKyu.getAverage(new int[] {1,2,3,4,5}));
         assertEquals(1, KataEightKyu.getAverage(new int[] {1,1,1,1,1,1,1,2}));
+    }
+
+    @Test
+    @DisplayName("smallEnough")
+    public void testSmallEnough() {
+        assertTrue(KataEightKyu.smallEnough(new int[]{66, 101}, 200));
+        assertFalse(KataEightKyu.smallEnough(new int[] { 78, 117, 110, 99, 104, 117, 107, 115 }, 100));
+        assertTrue(KataEightKyu.smallEnough(new int[] { 101, 45, 75, 105, 99, 107 }, 107));
+        assertTrue(KataEightKyu.smallEnough(new int[] { 80, 117, 115, 104, 45, 85, 112, 115 }, 120));
     }
 }
