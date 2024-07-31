@@ -119,6 +119,17 @@ public class KataEightKyuTest {
 
         int[] expectedResultB = new int[] {8, -50};
         assertArrayEquals(expectedResultB, KataEightKyu.countPositivesSumNegatives(new int[] {0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14}));
+    }
+
+    @Test
+    @DisplayName("sumArrays")
+    public void testSumArrays() {
+        assertEquals(0, KataEightKyu.sumArrays(new double[] { }));
+        assertEquals(-2.398, KataEightKyu.sumArrays(new double[] {-2.398}));
+        assertEquals(6, KataEightKyu.sumArrays(new double[] {1, 2, 3}));
+        assertEquals(6.6, KataEightKyu.sumArrays(new double[] {1.1, 2.2, 3.3}));
+        assertEquals(9.2, KataEightKyu.sumArrays(new double[] {1, 5.2, 4, 0, -1}));
+        assertEquals(320, KataEightKyu.sumArrays(new double[] {30, 89, 100, 101}));
 
     }
 }

@@ -126,4 +126,16 @@ public class KataEightKyu {
 
         return new int[] {count, sum};
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/13-sum_arrays.md
+     */
+    public static double sumArrays(double[] numbers) {
+        if (numbers.length != 0) {
+            return Arrays.stream(numbers).reduce(0, (p, c) -> p + c);
+        }
+
+        return 0;
+    }
+
 }
