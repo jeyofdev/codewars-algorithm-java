@@ -156,4 +156,18 @@ public class KataEightKyuTest {
         assertEquals(15, KataEightKyu.arrayPlusArray(new int[]{0,0,0}, new int[]{4,5,6}));
         assertEquals(2100, KataEightKyu.arrayPlusArray(new int[]{100,200,300}, new int[]{400,500,600}));
     }
+
+    @Test
+    @DisplayName("creditCardMask")
+    public void testCreditCardMask() {
+        assertEquals("############5616", KataEightKyu.creditCardMask("4556364607935616"), "\"Should return ############5616 for string \"4556364607935616\"");
+        assertEquals("#######5616", KataEightKyu.creditCardMask("64607935616"), "\"Should return #######5616 for string \"64607935616\"");
+        assertEquals("1", KataEightKyu.creditCardMask("1"), "\"Should return 1 for string \"1\"");
+        assertEquals("", KataEightKyu.creditCardMask(""), "\"Should return \"\" for string \"\"");
+
+        // "What was the name of your first pet?"
+        assertEquals("##ippy", KataEightKyu.creditCardMask("Skippy"), "Should return ##ippy for string \"Skippy\"");
+        assertEquals("####################################man!", KataEightKyu.creditCardMask("Nananananananananananananananana Batman!"), "Should return ####################################man! for string \"Nananananananananananananananana Batman!\"");
+        assertEquals(2100, KataEightKyu.arrayPlusArray(new int[]{100,200,300}, new int[]{400,500,600}));
+    }
 }
