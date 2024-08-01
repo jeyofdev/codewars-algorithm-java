@@ -142,4 +142,14 @@ public class KataSixKyuTest {
         assertEquals("Max, John and Mark like this", KataSixKyu.whoLikesIt("Max", "John", "Mark"));
         assertEquals("Alex, Jacob and 2 others like this", KataSixKyu.whoLikesIt("Alex", "Jacob", "Mark", "Max"));
     }
+
+    @Test
+    @DisplayName("arrayDiff")
+    public void testArrayDiff() {
+        assertArrayEquals(new int[] {2}, KataSixKyu.arrayDiff(new int [] {1,2}, new int[] {1}));
+        assertArrayEquals(new int[] {2,2}, KataSixKyu.arrayDiff(new int [] {1,2,2}, new int[] {1}));
+        assertArrayEquals(new int[] {1}, KataSixKyu.arrayDiff(new int [] {1,2,2}, new int[] {2}));
+        assertArrayEquals(new int[] {1,2,2}, KataSixKyu.arrayDiff(new int [] {1,2,2}, new int[] {}));
+        assertArrayEquals(new int[] {}, KataSixKyu.arrayDiff(new int [] {}, new int[] {1,2}));
+    }
 }

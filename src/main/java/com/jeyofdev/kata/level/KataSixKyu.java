@@ -262,4 +262,24 @@ public class KataSixKyu {
                 return names[0] + ", " + names[1] + " and " + (countNames - 2) + " others like this";
         }
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/6kyu/15-array_diff.md
+     */
+    public static int[] arrayDiff(int[] a, int[] b) {
+        Set<Integer> setB = new HashSet<>();
+        for (int num: b ) {
+            setB.add(num);
+        }
+
+        List<Integer> result = new ArrayList<>();
+
+        for (Integer itemA: a) {
+            if (!setB.contains(itemA)) {
+                result.add(itemA);
+            }
+        }
+
+        return result.stream().mapToInt(e -> e).toArray();
+    }
 }
