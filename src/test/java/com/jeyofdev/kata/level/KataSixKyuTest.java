@@ -131,6 +131,15 @@ public class KataSixKyuTest {
     public void testDigitalRoot() {
         assertEquals(7, KataSixKyu.digitalRoot(16), "should return 7 for integer 16");
         assertEquals(6, KataSixKyu.digitalRoot(456), "should return 6 for integer 456");
+    }
 
+    @Test
+    @DisplayName("whoLikesIt")
+    public void testWhoLikesIt() {
+        assertEquals("no one likes this", KataSixKyu.whoLikesIt());
+        assertEquals("Peter likes this", KataSixKyu.whoLikesIt("Peter"));
+        assertEquals("Jacob and Alex like this", KataSixKyu.whoLikesIt("Jacob", "Alex"));
+        assertEquals("Max, John and Mark like this", KataSixKyu.whoLikesIt("Max", "John", "Mark"));
+        assertEquals("Alex, Jacob and 2 others like this", KataSixKyu.whoLikesIt("Alex", "Jacob", "Mark", "Max"));
     }
 }
