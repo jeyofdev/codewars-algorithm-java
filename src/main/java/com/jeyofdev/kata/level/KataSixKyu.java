@@ -197,4 +197,30 @@ public class KataSixKyu {
 
         return total == m ? n : -1;
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/6kyu/12-create_phone_number.md
+     */
+    public static String createPhoneNumber(int[] numbers) {
+        StringBuilder result = new StringBuilder();
+        result.append("(");
+
+        for (int i = 0; i < 3; i++) {
+            result.append(numbers[i]);
+        }
+
+        result.append(") ");
+
+        for (int i = 3; i < 6; i++) {
+            result.append(numbers[i]);
+        }
+
+        result.append("-");
+
+        for (int i = 6; i < 10; i++) {
+            result.append(numbers[i]);
+        }
+
+        return result.toString();
+    }
 }

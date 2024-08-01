@@ -119,4 +119,10 @@ public class KataSixKyuTest {
         assertEquals(4824, KataSixKyu.findNb(135440716410000L), "should return 4824 for long 135440716410000L");
         assertEquals(3568, KataSixKyu.findNb(40539911473216L), "should return 3568 for long 40539911473216L");
     }
+
+    @Test
+    @DisplayName("createPhoneNumber")
+    public void testCreatePhoneNumber() {
+        assertEquals("(123) 456-7890", KataSixKyu.createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
+    }
 }
