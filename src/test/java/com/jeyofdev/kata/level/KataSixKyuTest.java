@@ -125,4 +125,12 @@ public class KataSixKyuTest {
     public void testCreatePhoneNumber() {
         assertEquals("(123) 456-7890", KataSixKyu.createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
     }
+
+    @Test
+    @DisplayName("digitalRoot")
+    public void testDigitalRoot() {
+        assertEquals(7, KataSixKyu.digitalRoot(16), "should return 7 for integer 16");
+        assertEquals(6, KataSixKyu.digitalRoot(456), "should return 6 for integer 456");
+
+    }
 }

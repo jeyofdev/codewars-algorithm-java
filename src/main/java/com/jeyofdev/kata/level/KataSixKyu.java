@@ -223,4 +223,19 @@ public class KataSixKyu {
 
         return result.toString();
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/6kyu/13-um_of_digits_digital_root.md
+     */
+    public static int digitalRoot(int n) {
+        if (n < 10) return n;
+
+        int sum = 0;
+        while (n > 0) {
+            sum += n % 10;
+            n /= 10;
+        }
+
+        return digitalRoot(sum);
+    }
 }
