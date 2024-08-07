@@ -140,4 +140,18 @@ public class KataSevenKyu {
 
         return new BigInteger(num.toString()).longValue();
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/11-split_in_parts.md
+     */
+    public static String splitInParts(String s, int partLength) {
+        StringBuilder output = new StringBuilder();
+
+        for (int i = 0; i < s.length(); i += partLength) {
+            if (i > 0) output.append(' ');
+            output.append(s.substring(i, Math.min(s.length(), i + partLength)));
+        }
+
+        return output.toString();
+    }
 }

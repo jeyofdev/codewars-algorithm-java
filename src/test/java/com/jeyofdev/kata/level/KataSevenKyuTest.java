@@ -97,4 +97,13 @@ public class KataSevenKyuTest {
         assertEquals(123, KataSevenKyu.filterString("a1b2c3"), "Should return 123 for string \"a1b2c3\"");
         assertEquals(123, KataSevenKyu.filterString("aa1bb2cc3dd"), "Should return 123 for string \"aa1bb2cc3dd\"");
     }
+
+    @Test
+    @DisplayName("splitInParts")
+    public void testSplitInParts() {
+        assertEquals("sup erc ali fra gil ist ice xpi ali doc iou s", KataSevenKyu.splitInParts("supercalifragilisticexpialidocious", 3));
+        assertEquals("Hel loK ata", KataSevenKyu.splitInParts("HelloKata", 3));
+        assertEquals("H e l l o K a t a", KataSevenKyu.splitInParts("HelloKata", 1));
+        assertEquals("HelloKata", KataSevenKyu.splitInParts("HelloKata", 9));
+    }
 }
