@@ -196,4 +196,10 @@ public class KataEightKyuTest {
         assertEquals(0, KataEightKyu.sumPositive(new int[]{-1,-2,-3,-4,-5}), "Should return 0 for array [-1,-2,-3,-4,-5]");
         assertEquals(9, KataEightKyu.sumPositive(new int[]{-1,2,3,4,-5}), "Should return 9 for array [-1,2,3,4,-5]");
     }
+
+    @Test
+    @DisplayName("makeNegative")
+    public void testMakeNegative() {
+        assertEquals(-42, KataEightKyu.makeNegative(42));
+    }
 }

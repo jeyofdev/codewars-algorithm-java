@@ -192,4 +192,11 @@ public class KataEightKyu {
         return Arrays.stream(arr)
                 .reduce(0, (p, c) -> c >= 0 ? p + c : p);
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/20-return_negative.md
+     */
+    public static int makeNegative(final int x) {
+        return -Math.abs(x);
+    }
 }
