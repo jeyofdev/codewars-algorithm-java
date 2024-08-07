@@ -89,4 +89,12 @@ public class KataSevenKyuTest {
         assertEquals(24, KataSevenKyu.breakChocolate(5, 5), "Should return 24 for integers 5 and 5");
         assertEquals(0, KataSevenKyu.breakChocolate(1, 1), "Should return 0 for integers 1 and 1");
     }
+
+    @Test
+    @DisplayName("filterString")
+    public void testFilterString() {
+        assertEquals(123, KataSevenKyu.filterString("123"), "Should return 123 for string \"123\"");
+        assertEquals(123, KataSevenKyu.filterString("a1b2c3"), "Should return 123 for string \"a1b2c3\"");
+        assertEquals(123, KataSevenKyu.filterString("aa1bb2cc3dd"), "Should return 123 for string \"aa1bb2cc3dd\"");
+    }
 }

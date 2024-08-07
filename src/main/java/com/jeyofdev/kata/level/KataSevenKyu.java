@@ -1,5 +1,6 @@
 package com.jeyofdev.kata.level;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -125,4 +126,18 @@ public class KataSevenKyu {
         return (n > 0) && (m > 0) ? (n * m) - 1 : 0;
     }
 
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/10-filter_the_number.md
+     */
+    public static long filterString(final String value) {
+        StringBuilder num = new StringBuilder();
+
+        for (char c : value.toCharArray()) {
+            if (Character.isDigit(c)) {
+                num.append(c);
+            }
+        }
+
+        return new BigInteger(num.toString()).longValue();
+    }
 }
