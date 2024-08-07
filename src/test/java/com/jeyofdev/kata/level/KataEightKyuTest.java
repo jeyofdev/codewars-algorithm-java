@@ -186,4 +186,14 @@ public class KataEightKyuTest {
         assertTrue(KataEightKyu.smallEnough(new int[] { 101, 45, 75, 105, 99, 107 }, 107));
         assertTrue(KataEightKyu.smallEnough(new int[] { 80, 117, 115, 104, 45, 85, 112, 115 }, 120));
     }
+
+    @Test
+    @DisplayName("sumPositive")
+    public void testSumPositive() {
+        assertEquals(15, KataEightKyu.sumPositive(new int[]{1,2,3,4,5}), "Should return 15 for array [1,2,3,4,5]");
+        assertEquals(13, KataEightKyu.sumPositive(new int[]{1,-2,3,4,5}), "Should return 13 for array [1,-2,3,4,5]");
+        assertEquals(0, KataEightKyu.sumPositive(new int[]{}), "Should return 0 for array []");
+        assertEquals(0, KataEightKyu.sumPositive(new int[]{-1,-2,-3,-4,-5}), "Should return 0 for array [-1,-2,-3,-4,-5]");
+        assertEquals(9, KataEightKyu.sumPositive(new int[]{-1,2,3,4,-5}), "Should return 9 for array [-1,2,3,4,-5]");
+    }
 }

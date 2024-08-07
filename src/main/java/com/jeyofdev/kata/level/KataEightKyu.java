@@ -184,4 +184,12 @@ public class KataEightKyu {
     {
         return Arrays.stream(a).allMatch(v -> v <= limit);
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/19-sum_of_positive.md
+     */
+    public static int sumPositive(int[] arr){
+        return Arrays.stream(arr)
+                .reduce(0, (p, c) -> c >= 0 ? p + c : p);
+    }
 }
