@@ -212,4 +212,11 @@ public class KataEightKyu {
 
         return output;
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/22-remove_string_spaces.md
+     */
+    public static String noSpace(final String x) {
+        return x.replaceAll("\\s", "");
+    }
 }
