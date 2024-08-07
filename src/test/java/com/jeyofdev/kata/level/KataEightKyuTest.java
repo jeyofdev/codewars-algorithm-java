@@ -202,4 +202,11 @@ public class KataEightKyuTest {
     public void testMakeNegative() {
         assertEquals(-42, KataEightKyu.makeNegative(42));
     }
+
+    @Test
+    @DisplayName("summation")
+    public void testSummation() {
+        assertEquals(1, KataEightKyu.summation(1));
+        assertEquals(36, KataEightKyu.summation(8));
+    }
 }

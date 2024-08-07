@@ -199,4 +199,17 @@ public class KataEightKyu {
     public static int makeNegative(final int x) {
         return -Math.abs(x);
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/21-grasshopper_summation.md
+     */
+    public static int summation(int n) {
+        int output = 0;
+
+        for (int i = 1; i <= n; i++) {
+            output += i;
+        }
+
+        return output;
+    }
 }
