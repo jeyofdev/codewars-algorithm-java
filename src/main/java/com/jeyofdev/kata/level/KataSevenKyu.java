@@ -154,4 +154,20 @@ public class KataSevenKyu {
 
         return output.toString();
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/12-highest_and_lowest.md
+     */
+    public static String highAndLow(String numbers) {
+        String[] numStrings = numbers.split(" ");
+
+        int[] nums = Arrays.stream(numStrings)
+                .mapToInt(e -> Integer.parseInt(e))
+                .toArray();
+
+        int min = Arrays.stream(nums).min().orElseThrow();
+        int max = Arrays.stream(nums).max().orElseThrow();
+
+        return String.format("%d %d", max, min);
+    }
 }

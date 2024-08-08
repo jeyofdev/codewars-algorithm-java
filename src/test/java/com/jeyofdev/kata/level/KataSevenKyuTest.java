@@ -106,4 +106,11 @@ public class KataSevenKyuTest {
         assertEquals("H e l l o K a t a", KataSevenKyu.splitInParts("HelloKata", 1));
         assertEquals("HelloKata", KataSevenKyu.splitInParts("HelloKata", 9));
     }
+
+    @Test
+    @DisplayName("highAndLow")
+    public void testHighAndLow() {
+        assertEquals("42 -9", KataSevenKyu.highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"), "Should return string \"42 -9\" for string \"8 3 -5 42 -1 0 0 -9 4 7 4 -4\"");
+        assertEquals("3 1", KataSevenKyu.highAndLow("1 2 3"), "Should return string \"3 1\" for string \"1 2 3\"");
+    }
 }
