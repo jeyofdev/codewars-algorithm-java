@@ -113,4 +113,12 @@ public class KataSevenKyuTest {
         assertEquals("42 -9", KataSevenKyu.highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"), "Should return string \"42 -9\" for string \"8 3 -5 42 -1 0 0 -9 4 7 4 -4\"");
         assertEquals("3 1", KataSevenKyu.highAndLow("1 2 3"), "Should return string \"3 1\" for string \"1 2 3\"");
     }
+
+    @Test
+    @DisplayName("sortDesc")
+    public void testSortDesc() {
+        assertEquals(0, KataSevenKyu.sortDesc(0), "Should return 0 for integer 0");
+        assertEquals(51, KataSevenKyu.sortDesc(15), "Should return 51 for integer 15");
+        assertEquals(987654321, KataSevenKyu.sortDesc(123456789), "Should return 987654321 for integer 123456789");
+    }
 }

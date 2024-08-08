@@ -3,6 +3,7 @@ package com.jeyofdev.kata.level;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -170,4 +171,17 @@ public class KataSevenKyu {
 
         return String.format("%d %d", max, min);
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/13-descending_order.md
+     */
+    public static int sortDesc(final int num) {
+        String[] nums = Integer.toString(num).split("");
+        Arrays.sort(nums, Collections.reverseOrder());
+
+        String sortedStr = String.join("", nums);
+
+        return Integer.parseInt(sortedStr);
+    }
+
 }
