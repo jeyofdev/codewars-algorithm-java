@@ -3,6 +3,8 @@ package com.jeyofdev.kata.level;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -120,5 +122,13 @@ public class KataSevenKyuTest {
         assertEquals(0, KataSevenKyu.sortDesc(0), "Should return 0 for integer 0");
         assertEquals(51, KataSevenKyu.sortDesc(15), "Should return 51 for integer 15");
         assertEquals(987654321, KataSevenKyu.sortDesc(123456789), "Should return 987654321 for integer 123456789");
+    }
+
+    @Test
+    @DisplayName("filterList")
+    public void testFilterList() {
+        assertEquals(List.of(1, 2), KataSevenKyu.filterList(List.of(1, 2, "a", "b")));
+        assertEquals(List.of(1, 0, 15), KataSevenKyu.filterList(List.of(1, "a", "b", 0, 15)));
+        assertEquals(List.of(1, 2, 123), KataSevenKyu.filterList(List.of(1, 2, "aasf", "1", "123", 123)));
     }
 }

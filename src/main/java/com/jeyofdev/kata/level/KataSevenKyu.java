@@ -184,4 +184,12 @@ public class KataSevenKyu {
         return Integer.parseInt(sortedStr);
     }
 
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/14-list_filtering.md
+     */
+    public static List<Object> filterList(final List<Object> list) {
+        return list.stream()
+                .filter(e -> e instanceof Integer)
+                .collect(Collectors.toList());
+    }
 }
