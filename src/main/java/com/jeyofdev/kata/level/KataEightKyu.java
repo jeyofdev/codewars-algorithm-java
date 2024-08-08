@@ -219,4 +219,12 @@ public class KataEightKyu {
     public static String noSpace(final String x) {
         return x.replaceAll("\\s", "");
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/23-find_the_smallest_integer_in_the_array.md
+     */
+    public static int findSmallestInt(int[] args) {
+        Arrays.sort(args);
+        return args[0];
+    }
 }

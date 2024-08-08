@@ -219,4 +219,12 @@ public class KataEightKyuTest {
         assertEquals("jfBmgklf8hg88lbe8", KataEightKyu.noSpace("jfBm  gk lf8hg  88lbe8 "));
         assertEquals("8jaam", KataEightKyu.noSpace("8j aam"));
     }
+
+    @Test
+    @DisplayName("findSmallestInt")
+    public void testFindSmallestInt() {
+        assertEquals(11, KataEightKyu.findSmallestInt(new int[]{78,56,232,12,11,43}));
+        assertEquals(-33, KataEightKyu.findSmallestInt(new int[]{78,56,-2,12,8,-33}));
+        assertEquals(Integer.MIN_VALUE, KataEightKyu.findSmallestInt(new int[]{0,Integer.MIN_VALUE,Integer.MAX_VALUE}));
+    }
 }
