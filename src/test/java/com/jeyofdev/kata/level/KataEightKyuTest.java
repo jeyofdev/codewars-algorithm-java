@@ -227,4 +227,12 @@ public class KataEightKyuTest {
         assertEquals(-33, KataEightKyu.findSmallestInt(new int[]{78,56,-2,12,8,-33}));
         assertEquals(Integer.MIN_VALUE, KataEightKyu.findSmallestInt(new int[]{0,Integer.MIN_VALUE,Integer.MAX_VALUE}));
     }
+
+    @Test
+    @DisplayName("numberToString")
+    public void testNumberToString() {
+        assertEquals("67", KataEightKyu.numberToString(67));
+        assertEquals("123", KataEightKyu.numberToString(123));
+        assertEquals("999", KataEightKyu.numberToString(999));
+    }
 }

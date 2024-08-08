@@ -227,4 +227,11 @@ public class KataEightKyu {
         Arrays.sort(args);
         return args[0];
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/24-convert_a_number_to_a_string.md
+     */
+    public static String numberToString(int num) {
+        return String.valueOf(num);
+    }
 }
