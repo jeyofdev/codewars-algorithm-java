@@ -200,14 +200,14 @@ public class KataEightKyuTest {
     @Test
     @DisplayName("makeNegative")
     public void testMakeNegative() {
-        assertEquals(-42, KataEightKyu.makeNegative(42));
+        assertEquals(-42, KataEightKyu.makeNegative(42), "Should return -42 for integer 42");
     }
 
     @Test
     @DisplayName("summation")
     public void testSummation() {
-        assertEquals(1, KataEightKyu.summation(1));
-        assertEquals(36, KataEightKyu.summation(8));
+        assertEquals(1, KataEightKyu.summation(1), "Should return 1 for integer 1");
+        assertEquals(36, KataEightKyu.summation(8), "Should return 36 for integer 8");
     }
 
     @Test
@@ -234,5 +234,11 @@ public class KataEightKyuTest {
         assertEquals("67", KataEightKyu.numberToString(67));
         assertEquals("123", KataEightKyu.numberToString(123));
         assertEquals("999", KataEightKyu.numberToString(999));
+    }
+
+    @Test
+    @DisplayName("reversedStrings")
+    public void testReversedStrings() {
+        assertEquals("dlrow", KataEightKyu.reversedStrings("world"), "Should return dlrow for string \"world\"");
     }
 }

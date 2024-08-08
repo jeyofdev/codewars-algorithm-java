@@ -234,4 +234,11 @@ public class KataEightKyu {
     public static String numberToString(int num) {
         return String.valueOf(num);
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/25-reversed_strings.md
+     */
+    public static String reversedStrings(String str) {
+        return new StringBuilder(str).reverse().toString();
+    }
 }
