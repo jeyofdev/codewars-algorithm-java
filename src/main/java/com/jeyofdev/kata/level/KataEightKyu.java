@@ -254,4 +254,11 @@ public class KataEightKyu {
 
         return num;
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/27-is_n_divisible_by_x_and_y.md
+     */
+    public static boolean isDivisible(long n, long x, long y) {
+        return (n % x == 0) && (n % y == 0);
+    }
 }

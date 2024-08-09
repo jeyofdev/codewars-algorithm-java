@@ -255,4 +255,11 @@ public class KataEightKyuTest {
         };
         assertEquals(17, KataEightKyu.countSheeps(array1), "Should return 17");
     }
+
+    @Test
+    @DisplayName("isDivisible")
+    public void testIsDivisible() {
+        assertTrue(KataEightKyu.isDivisible(12,4,3));
+        assertFalse(KataEightKyu.isDivisible(3,3,4));
+    }
 }
