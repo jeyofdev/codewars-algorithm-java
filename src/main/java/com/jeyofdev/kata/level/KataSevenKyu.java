@@ -204,4 +204,13 @@ public class KataSevenKyu {
 
         return true;
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/16-number_of_people_in_the_bus.md
+     */
+    public static int countPassengers(ArrayList<int[]> stops) {
+        return stops.stream()
+                .mapToInt(e -> e[0] - e [1])
+                .sum();
+    }
 }

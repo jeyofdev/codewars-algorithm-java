@@ -3,6 +3,7 @@ package com.jeyofdev.kata.level;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -143,5 +144,16 @@ public class KataSevenKyuTest {
         assertFalse(KataSevenKyu.isIsogram("moOse"));
         assertTrue(KataSevenKyu.isIsogram("thumbscrewjapingly"));
         assertTrue(KataSevenKyu.isIsogram(""));
+    }
+
+    @Test
+    @DisplayName("countPassengers")
+    public void testCountPassengers() {
+        ArrayList<int[]> list = new ArrayList<int[]>();
+        list.add(new int[] {10, 0});
+        list.add(new int[] {3, 5});
+        list.add(new int[] {2, 5});
+
+        assertEquals(5, KataSevenKyu.countPassengers(list));
     }
 }
