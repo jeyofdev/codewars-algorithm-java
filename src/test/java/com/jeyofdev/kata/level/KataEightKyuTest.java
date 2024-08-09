@@ -241,4 +241,18 @@ public class KataEightKyuTest {
     public void testReversedStrings() {
         assertEquals("dlrow", KataEightKyu.reversedStrings("world"), "Should return dlrow for string \"world\"");
     }
+
+    @Test
+    @DisplayName("countSheeps")
+    public void testCountSheeps() {
+        Boolean[] array1 = {
+                true,  true,  true,  false,
+                true,  true,  true,  true ,
+                true,  false, true,  false,
+                true,  false, false, true ,
+                true,  true,  true,  true ,
+                false, false, true,  true
+        };
+        assertEquals(17, KataEightKyu.countSheeps(array1), "Should return 17");
+    }
 }

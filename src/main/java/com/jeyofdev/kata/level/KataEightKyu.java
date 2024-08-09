@@ -241,4 +241,17 @@ public class KataEightKyu {
     public static String reversedStrings(String str) {
         return new StringBuilder(str).reverse().toString();
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/26-counting_sheep.md
+     */
+    public static int countSheeps(Boolean[] arrayOfSheeps) {
+        int num = 0;
+
+        for (Boolean arrayOfSheep : arrayOfSheeps) {
+            if (arrayOfSheep != null && arrayOfSheep) num++;
+        }
+
+        return num;
+    }
 }
