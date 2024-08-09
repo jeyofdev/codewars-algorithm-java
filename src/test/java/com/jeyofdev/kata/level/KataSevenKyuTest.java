@@ -156,4 +156,13 @@ public class KataSevenKyuTest {
 
         assertEquals(5, KataSevenKyu.countPassengers(list));
     }
+
+    @Test
+    @DisplayName("reverseWords")
+    public void testReverseWords() {
+        assertEquals("ehT kciuq nworb xof spmuj revo eht yzal .god", KataSevenKyu.reverseWords("The quick brown fox jumps over the lazy dog."));
+        assertEquals("elppa", KataSevenKyu.reverseWords("apple"));
+        assertEquals("a b c d", KataSevenKyu.reverseWords("a b c d"));
+        assertEquals("elbuod  decaps  sdrow", KataSevenKyu.reverseWords("double  spaced  words"));
+    }
 }

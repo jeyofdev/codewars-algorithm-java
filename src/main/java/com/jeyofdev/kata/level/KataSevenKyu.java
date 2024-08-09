@@ -213,4 +213,16 @@ public class KataSevenKyu {
                 .mapToInt(e -> e[0] - e [1])
                 .sum();
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/17-reverse_words.md
+     */
+    public static String reverseWords(final String original)
+    {
+        if (original.trim().isEmpty()) return original;
+
+        return Arrays.stream(original.split(" "))
+                .map(word -> new StringBuilder(word).reverse().toString())
+                .collect(Collectors.joining(" "));
+    }
 }
