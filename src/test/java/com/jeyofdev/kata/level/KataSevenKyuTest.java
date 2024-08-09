@@ -131,4 +131,17 @@ public class KataSevenKyuTest {
         assertEquals(List.of(1, 0, 15), KataSevenKyu.filterList(List.of(1, "a", "b", 0, 15)));
         assertEquals(List.of(1, 2, 123), KataSevenKyu.filterList(List.of(1, 2, "aasf", "1", "123", 123)));
     }
+
+    @Test
+    @DisplayName("isIsogram")
+    public void testIsIsogram() {
+        assertTrue(KataSevenKyu.isIsogram("Dermatoglyphics"));
+        assertTrue(KataSevenKyu.isIsogram("isogram"));
+        assertFalse(KataSevenKyu.isIsogram("moose"));
+        assertFalse(KataSevenKyu.isIsogram("isIsogram"));
+        assertFalse(KataSevenKyu.isIsogram("aba"));
+        assertFalse(KataSevenKyu.isIsogram("moOse"));
+        assertTrue(KataSevenKyu.isIsogram("thumbscrewjapingly"));
+        assertTrue(KataSevenKyu.isIsogram(""));
+    }
 }

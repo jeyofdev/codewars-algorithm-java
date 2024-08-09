@@ -1,10 +1,7 @@
 package com.jeyofdev.kata.level;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class KataSevenKyu {
@@ -191,5 +188,20 @@ public class KataSevenKyu {
         return list.stream()
                 .filter(e -> e instanceof Integer)
                 .collect(Collectors.toList());
+    }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/15-isograms.md
+     */
+    public static boolean  isIsogram(String str) {
+        Set<Character> letters = new HashSet<>();
+
+        for (char letter : str.toLowerCase().toCharArray()) {
+            if (!letters.add(letter)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
