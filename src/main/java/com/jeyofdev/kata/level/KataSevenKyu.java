@@ -225,4 +225,14 @@ public class KataSevenKyu {
                 .map(word -> new StringBuilder(word).reverse().toString())
                 .collect(Collectors.joining(" "));
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/18-odd_or_even.md
+     */
+    public static String oddOrEven (int[] array) {
+        int sum = Arrays.stream(array)
+                .reduce(0, (p, c) -> p + c);
+
+        return sum % 2 == 0 ? "even" : "odd";
+    }
 }

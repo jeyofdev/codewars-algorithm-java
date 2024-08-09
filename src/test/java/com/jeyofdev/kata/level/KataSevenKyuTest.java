@@ -165,4 +165,12 @@ public class KataSevenKyuTest {
         assertEquals("a b c d", KataSevenKyu.reverseWords("a b c d"));
         assertEquals("elbuod  decaps  sdrow", KataSevenKyu.reverseWords("double  spaced  words"));
     }
+
+    @Test
+    @DisplayName("oddOrEven")
+    public void testOddOrEven() {
+        assertEquals("odd", KataSevenKyu.oddOrEven(new int[] {2, 5, 34, 6}));
+        assertEquals("even", KataSevenKyu.oddOrEven(new int[] {12, 6, 14, 6}));
+
+    }
 }
