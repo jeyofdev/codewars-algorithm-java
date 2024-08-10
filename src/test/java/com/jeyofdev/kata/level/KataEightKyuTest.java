@@ -262,4 +262,13 @@ public class KataEightKyuTest {
         assertTrue(KataEightKyu.isDivisible(12,4,3));
         assertFalse(KataEightKyu.isDivisible(3,3,4));
     }
+
+    @Test
+    @DisplayName("squareSum")
+    public void testSquareSum() {
+        assertEquals(9, KataEightKyu.squareSum(new int[] {1,2,2}), "Should return 9 for [1,2,2]");
+        assertEquals(5, KataEightKyu.squareSum(new int[] {1,2}), "Should return 5 for [1,2]");
+        assertEquals(50, KataEightKyu.squareSum(new int[] {5,-3,4}), "Should return 50 for [5,-3,4]");
+        assertEquals(0, KataEightKyu.squareSum(new int[] {}), "Should return 0 for []");
+    }
 }

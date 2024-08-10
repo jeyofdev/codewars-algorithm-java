@@ -261,4 +261,14 @@ public class KataEightKyu {
     public static boolean isDivisible(long n, long x, long y) {
         return (n % x == 0) && (n % y == 0);
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/28-quare_Sum.md
+     */
+    public static int squareSum(int[] n)
+    {
+        return Arrays.stream(n)
+                .map(e -> e * e)
+                .sum();
+    }
 }
