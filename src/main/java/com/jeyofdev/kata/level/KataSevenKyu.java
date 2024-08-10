@@ -254,4 +254,16 @@ public class KataSevenKyu {
                 })
                 .sum();
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/21-shortest_word.md
+     */
+    public static int findShort(String s) {
+        int[] strLength = Arrays.stream(s.split(" "))
+                .mapToInt(el -> el.length())
+                .toArray();
+
+        Arrays.sort(strLength);
+        return strLength.length > 0 ? strLength[0] : -1;
+    }
 }

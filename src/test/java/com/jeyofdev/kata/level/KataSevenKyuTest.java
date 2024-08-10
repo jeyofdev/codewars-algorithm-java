@@ -200,4 +200,11 @@ public class KataSevenKyuTest {
         assertEquals(19, KataSevenKyu.repeats(new int []{9, 10, 19, 13, 19, 13}), "Should return 19 for [9, 10, 19, 13, 19, 13]");
         assertEquals(12, KataSevenKyu.repeats(new int []{16, 0, 11, 4, 8, 16, 0, 11}), "Should return 12 for [16, 0, 11, 4, 8, 16, 0, 11]");
     }
+
+    @Test
+    @DisplayName("findShort")
+    public void testFindShort() {
+        assertEquals(3, KataSevenKyu.findShort("bitcoin take over the world maybe who knows perhaps"), "Should return 3 for string \"bitcoin take over the world maybe who knows perhaps\"");
+        assertEquals(3, KataSevenKyu.findShort("turns out random test cases are easier than writing out basic ones"), "Should return 3 for string \"turns out random test cases are easier than writing out basic ones\"");
+        assertEquals(2, KataSevenKyu.findShort("Let's travel abroad shall we"), "Should return 2 for string \"Let's travel abroad shall we\"");}
 }
