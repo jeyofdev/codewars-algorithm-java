@@ -271,4 +271,17 @@ public class KataEightKyu {
                 .map(e -> e * e)
                 .sum();
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/29-count_by_x.md
+     */
+    public static int[] countBy(int x, int n){
+        int[] result = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            result[i] = (i + 1) * x;
+        }
+
+        return result;
+    }
 }

@@ -271,4 +271,14 @@ public class KataEightKyuTest {
         assertEquals(50, KataEightKyu.squareSum(new int[] {5,-3,4}), "Should return 50 for [5,-3,4]");
         assertEquals(0, KataEightKyu.squareSum(new int[] {}), "Should return 0 for []");
     }
+
+    @Test
+    @DisplayName("countBy")
+    public void testCountBy() {
+        assertArrayEquals(new int[] {1,2,3,4,5,6,7,8,9,10}, KataEightKyu.countBy(1,10), "Should return [1,2,3,4,5,6,7,8,9,10] for integers 1 and 10");
+        assertArrayEquals(new int[] {2,4,6,8,10}, KataEightKyu.countBy(2,5), "Should return [2,4,6,8,10] for integers 1 and 10");
+        assertArrayEquals(new int[] {3,6,9,12,15,18,21}, KataEightKyu.countBy(3,7), "Should return [3,6,9,12,15,18,21] for integers 1 and 10");
+        assertArrayEquals(new int[] {50,100,150,200,250}, KataEightKyu.countBy(50,5), "Should return [50,100,150,200,250] for integers 1 and 10");
+        assertArrayEquals(new int[] {100,200,300,400,500,600}, KataEightKyu.countBy(100,6), "Should return [100,200,300,400,500,600] for integers 1 and 10");
+    }
 }
