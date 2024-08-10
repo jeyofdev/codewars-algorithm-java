@@ -171,6 +171,25 @@ public class KataSevenKyuTest {
     public void testOddOrEven() {
         assertEquals("odd", KataSevenKyu.oddOrEven(new int[] {2, 5, 34, 6}));
         assertEquals("even", KataSevenKyu.oddOrEven(new int[] {12, 6, 14, 6}));
+    }
 
+    @Test
+    @DisplayName("stringEndsWith")
+    public void testStringEndsWith() {
+        assertTrue(KataSevenKyu.stringEndsWith("samurai", "ai"));
+        assertFalse(KataSevenKyu.stringEndsWith("sumo", "omo"));
+        assertTrue(KataSevenKyu.stringEndsWith("ninja", "ja"));
+        assertTrue(KataSevenKyu.stringEndsWith("sensei", "i"));
+        assertFalse(KataSevenKyu.stringEndsWith("samurai", "ra"));
+        assertFalse(KataSevenKyu.stringEndsWith("abc", "abcd"));
+        assertTrue(KataSevenKyu.stringEndsWith("abc", "abc"));
+        assertTrue(KataSevenKyu.stringEndsWith("abcabc", "bc"));
+        assertFalse(KataSevenKyu.stringEndsWith("ails", "fails"));
+        assertTrue(KataSevenKyu.stringEndsWith("fails", "ails"));
+        assertFalse(KataSevenKyu.stringEndsWith("this", "fails"));
+        assertTrue(KataSevenKyu.stringEndsWith("this", ""));
+        assertFalse(KataSevenKyu.stringEndsWith(":-)", ":-("));
+        assertTrue(KataSevenKyu.stringEndsWith("!@#$%^&*() :-)", ":-)"));
+        assertFalse(KataSevenKyu.stringEndsWith("abc\n", "abc"));
     }
 }

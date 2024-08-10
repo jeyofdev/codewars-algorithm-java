@@ -235,4 +235,11 @@ public class KataSevenKyu {
 
         return sum % 2 == 0 ? "even" : "odd";
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/19-string_ends_with.md
+     */
+    public static boolean stringEndsWith(String str, String ending) {
+        return str.endsWith(ending);
+    }
 }
