@@ -281,4 +281,11 @@ public class KataEightKyuTest {
         assertArrayEquals(new int[] {50,100,150,200,250}, KataEightKyu.countBy(50,5), "Should return [50,100,150,200,250] for integers 1 and 10");
         assertArrayEquals(new int[] {100,200,300,400,500,600}, KataEightKyu.countBy(100,6), "Should return [100,200,300,400,500,600] for integers 1 and 10");
     }
+
+    @Test
+    @DisplayName("digitize")
+    public void testDigitize() {
+        assertArrayEquals(new int[] {1, 3, 2, 5, 3}, KataEightKyu.digitize(35231), "Should return [1, 3, 2, 5, 3] for integer 35231");
+        assertArrayEquals(new int[] {0}, KataEightKyu.digitize(0), "Should return [0] for integer 0");
+    }
 }

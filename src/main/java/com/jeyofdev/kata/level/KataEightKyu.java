@@ -284,4 +284,18 @@ public class KataEightKyu {
 
         return result;
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/30-convert_number_to_reversed_array_of_digits.md
+     */
+    public static int[] digitize(long n) {
+        String[] digits = new StringBuilder(Long.toString(n))
+                .reverse()
+                .toString()
+                .split("");
+
+        return Arrays.stream(digits).
+                mapToInt(el -> Integer.parseInt(el))
+                .toArray();
+    }
 }
