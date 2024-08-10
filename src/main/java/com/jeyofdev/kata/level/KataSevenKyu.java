@@ -242,4 +242,16 @@ public class KataSevenKyu {
     public static boolean stringEndsWith(String str, String ending) {
         return str.endsWith(ending);
     }
+
+    /**
+     * Instructions : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/7kyu/20-sum_of_array_singles.md
+     */
+    public static int repeats(int [] arr){
+        return Arrays.stream(arr)
+                .filter(n -> {
+                    long count = Arrays.stream(arr).filter(num -> num == n).count();
+                    return count == 1;
+                })
+                .sum();
+    }
 }

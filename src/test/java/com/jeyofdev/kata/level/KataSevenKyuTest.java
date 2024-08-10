@@ -192,4 +192,12 @@ public class KataSevenKyuTest {
         assertTrue(KataSevenKyu.stringEndsWith("!@#$%^&*() :-)", ":-)"));
         assertFalse(KataSevenKyu.stringEndsWith("abc\n", "abc"));
     }
+
+    @Test
+    @DisplayName("repeats")
+    public void testRepeats() {
+        assertEquals(15, KataSevenKyu.repeats(new int []{4,5,7,5,4,8}), "Should return 15 for [4,5,7,5,4,8]");
+        assertEquals(19, KataSevenKyu.repeats(new int []{9, 10, 19, 13, 19, 13}), "Should return 19 for [9, 10, 19, 13, 19, 13]");
+        assertEquals(12, KataSevenKyu.repeats(new int []{16, 0, 11, 4, 8, 16, 0, 11}), "Should return 12 for [16, 0, 11, 4, 8, 16, 0, 11]");
+    }
 }
