@@ -288,4 +288,12 @@ public class KataEightKyuTest {
         assertArrayEquals(new int[] {1, 3, 2, 5, 3}, KataEightKyu.digitize(35231), "Should return [1, 3, 2, 5, 3] for integer 35231");
         assertArrayEquals(new int[] {0}, KataEightKyu.digitize(0), "Should return [0] for integer 0");
     }
+
+    @Test
+    @DisplayName("grow")
+    public void testGrow() {
+        assertEquals(6, KataEightKyu.grow(new int[]{1,2,3}), "Should return 6 for [1,2,3]");
+        assertEquals(16, KataEightKyu.grow(new int[]{4,1,1,1,4}), "Should return 16 for [4,1,1,1,4]");
+        assertEquals(64, KataEightKyu.grow(new int[]{2,2,2,2,2,2}), "Should return 64 for [2,2,2,2,2,2]");
+    }
 }

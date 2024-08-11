@@ -298,4 +298,11 @@ public class KataEightKyu {
                 mapToInt(el -> Integer.parseInt(el))
                 .toArray();
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/31-beginner_reduce_but_grow.md
+     */
+    public static int grow(int[] x){
+        return Arrays.stream(x).reduce(1, (p, c) -> p * c);
+    }
 }
