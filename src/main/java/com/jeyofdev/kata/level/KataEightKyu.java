@@ -305,4 +305,23 @@ public class KataEightKyu {
     public static int grow(int[] x){
         return Arrays.stream(x).reduce(1, (p, c) -> p * c);
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/32-total_amount_of_points.md
+     */
+    public static int points(String[] games) {
+        int points = 0;
+
+        for (String game : games) {
+            String[] split = game.split(":");
+
+            int score1 = Integer.parseInt(split[0]);
+            int score2 = Integer.parseInt(split[1]);
+
+            if (score1 > score2) points += 3;
+            else if (score1 == score2) points += 1;
+        }
+
+        return points;
+    }
 }

@@ -296,4 +296,19 @@ public class KataEightKyuTest {
         assertEquals(16, KataEightKyu.grow(new int[]{4,1,1,1,4}), "Should return 16 for [4,1,1,1,4]");
         assertEquals(64, KataEightKyu.grow(new int[]{2,2,2,2,2,2}), "Should return 64 for [2,2,2,2,2,2]");
     }
+
+    @Test
+    @DisplayName("points")
+    public void testPoints() {
+        assertEquals(30, KataEightKyu.points(new String[]
+                {"1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"}));
+        assertEquals(10, KataEightKyu.points(new String[]
+                {"1:1","2:2","3:3","4:4","2:2","3:3","4:4","3:3","4:4","4:4"}));
+        assertEquals(0, KataEightKyu.points(new String[]
+                {"0:1","0:2","0:3","0:4","1:2","1:3","1:4","2:3","2:4","3:4"}));
+        assertEquals(15, KataEightKyu.points(new String[]
+                {"1:0","2:0","3:0","4:0","2:1","1:3","1:4","2:3","2:4","3:4"}));
+        assertEquals(12, KataEightKyu.points(new String[]
+                {"1:0","2:0","3:0","4:4","2:2","3:3","1:4","2:3","2:4","3:4"}));
+    }
 }
