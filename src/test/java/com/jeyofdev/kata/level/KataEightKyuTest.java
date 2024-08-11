@@ -311,4 +311,13 @@ public class KataEightKyuTest {
         assertEquals(12, KataEightKyu.points(new String[]
                 {"1:0","2:0","3:0","4:4","2:2","3:3","1:4","2:3","2:4","3:4"}));
     }
+
+    @Test
+    @DisplayName("shortenToDate")
+    public void testShortenToDate() {
+        assertEquals("Friday May 2",KataEightKyu.shortenToDate("Friday May 2, 9am"));
+        assertEquals("Tuesday January 29",KataEightKyu.shortenToDate("Tuesday January 29, 10pm"));
+        assertEquals("Monday December 25",KataEightKyu.shortenToDate("Monday December 25, 10pm"));
+
+    }
 }

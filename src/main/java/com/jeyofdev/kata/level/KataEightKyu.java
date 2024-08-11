@@ -324,4 +324,11 @@ public class KataEightKyu {
 
         return points;
     }
+
+    /**
+     * Instruction : https://github.com/jeyofdev/codewars-algorithm-java/blob/main/doc/8kyu/33-remove_the_time.md
+     */
+    public static String shortenToDate(String longDate) {
+        return longDate.split(",")[0].trim();
+    }
 }
